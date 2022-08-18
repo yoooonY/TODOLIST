@@ -48,6 +48,7 @@ function saveToDo(toDo) {
 function createToDo(event) {
   event.preventDefault(); // submit 해도 창이 새로고침되지 않도록
   const toDo = toDoInput.value; // input에 입력된 값을 toDo로 선언
+
   if (toDoInput.value.length === 0) {
     // 입력값이 없으면 저장하지 않음
     toDoInput.focus();
@@ -84,9 +85,10 @@ function delToDo(event) {
 function completeTodo(event) {
   const target = (event.target.nodeName == "LI") ? event.target : event.target.parentNode;
   if (target.classList.contains('checked')) {
-    target.classList.remove('checked');
+    target.classList.remove('checked'); // 체크표시 해제
+
   } else {
-    target.classList.add('checked');
+    target.classList.add('checked'); // 완료표시 만들때  
   }
 }
 

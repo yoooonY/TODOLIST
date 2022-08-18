@@ -11,11 +11,28 @@ function getWeather(lat, lng) {
     .then(function(json) {
       const temperature = json.main.temp; // 위치
       const weath = json.weather[0].main; // 날씨
-      //      console.log(weath);
+      //console.log(weath);
       const place = json.name;
       weather.innerText = `${weath} ${temperature}˚C @ ${place}`;
+      //changeBG(weath);
     });
 }
+
+// function changeBG(data) {
+//   console.log(data);
+ 
+//   const title = document.getElementById('title');
+
+//   title.classList.remove(...title.classList);
+//   title.classList.add('weather-default');
+
+//   console.log(title);
+  
+
+//   // const rain = "https://source.unsplash.com/1600x900/?rain"; 
+//   // document.getElementById(title).style.backgroundImage = rain;
+// }
+
 
 // localStorage에 위치 정보 저장
 function saveCoords(coordsObj) {

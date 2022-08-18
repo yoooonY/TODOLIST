@@ -90,11 +90,13 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-image: url("https://source.unsplash.com/1600x900/?rain"); 
   background-size: cover;
+  
+  background-image: url('https://source.unsplash.com/1600x900/?rain'); 
+  transition: background-image 0.2s ease-in-out;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
-
-  padding: 30px 40px;
+  
+  padding: 20px 50px; /* 헤더 추가 영역 (높이, 너비) */
   color: white;
   text-align: center;
 }
